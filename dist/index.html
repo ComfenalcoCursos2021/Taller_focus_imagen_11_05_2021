@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="sp">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Focus imagen</title>
+  </head>
+  <body> 
+    <h1>Galeria de mi pais</h1>
+        <div> <img id="imga" src="img/Fondo.jpg">
+          <ul> 
+            <li coords="object-fit: none; object-position: 0% 20%;"> </li>
+            <li coords="object-fit: none; object-position: 95% 20%"> </li>
+            <li coords="object-fit: none; object-position: 20% 100%"> </li>
+            <li coords="object-fit: none; object-position: 85% 100%"> </li>
+            <li coords="object-fit: none; object-position: 50% 60%"> </li>
+            <li coords="object-fit: none; object-position: 50% 0%;"> </li>
+            <li coords="object-fit: none; object-position: 100% 60%;"> </li>
+            <li coords="object-fit: none; object-position: 50% 100%;"> </li>
+            <li coords="object-fit: none; object-position: 0% 55%;"> </li>
+          </ul>
+        </div>
+        <div> <img id="imga" src="img/Fondo2.jpg">
+          <ul> 
+            <li coords="object-fit: none; object-position: 0% 20%;"> </li>
+            <li coords="object-fit: none; object-position: 95% 20%"> </li>
+            <li coords="object-fit: none; object-position: 20% 100%"> </li>
+            <li coords="object-fit: none; object-position: 85% 100%"> </li>
+            <li coords="object-fit: none; object-position: 50% 60%"> </li>
+            <li coords="object-fit: none; object-position: 50% 0%;"> </li>
+            <li coords="object-fit: none; object-position: 100% 60%;"> </li>
+            <li coords="object-fit: none; object-position: 50% 100%;"> </li>
+            <li coords="object-fit: none; object-position: 0% 55%;"> </li>
+          </ul>
+        </div>
+        <div> <img id="imga" src="img/Fondo3.jpg">
+          <ul> 
+            <li coords="object-fit: none; object-position: 0% 20%;"> </li>
+            <li coords="object-fit: none; object-position: 95% 20%"> </li>
+            <li coords="object-fit: none; object-position: 20% 100%"> </li>
+            <li coords="object-fit: none; object-position: 85% 100%"> </li>
+            <li coords="object-fit: none; object-position: 50% 60%"> </li>
+            <li coords="object-fit: none; object-position: 50% 0%;"> </li>
+            <li coords="object-fit: none; object-position: 100% 60%;"> </li>
+            <li coords="object-fit: none; object-position: 50% 100%;"> </li>
+            <li coords="object-fit: none; object-position: 0% 55%;"> </li>
+          </ul>
+        </div>
+        <div> <img id="imga" src="img/Fondo4.png">
+          <ul> 
+            <li coords="object-fit: none; object-position: 0% 20%;"> </li>
+            <li coords="object-fit: none; object-position: 95% 20%"> </li>
+            <li coords="object-fit: none; object-position: 20% 100%"> </li>
+            <li coords="object-fit: none; object-position: 85% 100%"> </li>
+            <li coords="object-fit: none; object-position: 50% 60%"> </li>
+            <li coords="object-fit: none; object-position: 50% 0%;"> </li>
+            <li coords="object-fit: none; object-position: 100% 60%;"> </li>
+            <li coords="object-fit: none; object-position: 50% 100%;"> </li>
+            <li coords="object-fit: none; object-position: 0% 55%;"> </li>
+          </ul>
+        </div>
+    <script>
+      window.onload = function(){
+          let $ = document;
+          $.addEventListener("click", function( event ) {
+              if(event.target.children.length==0)
+                  if(event.path[2].firstElementChild.getAttribute("style"))
+                  event.path[2].firstElementChild.setAttribute('style', event.target.getAttribute("coords"));
+                  else
+                      event.path[2].firstElementChild.setAttribute('style', event.target.getAttribute("coords"));
+              else
+                  event.path[1].firstElementChild.removeAttribute('style');
+          }, false);
+      }
+    </script>
+  </body>
+</html>
